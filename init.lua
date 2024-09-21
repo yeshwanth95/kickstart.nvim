@@ -832,6 +832,7 @@ require('lazy').setup({
       -- Optionally configure and load the colorscheme
       -- directly inside the plugin declaration.
       vim.g.gruvbox_material_enable_italic = false
+      vim.g.gruvbox_material_diagnostic_virtual_text = 'colored'
       vim.cmd.colorscheme 'gruvbox-material'
     end,
   },
