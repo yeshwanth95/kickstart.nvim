@@ -817,6 +817,15 @@ require('lazy').setup({
           -- },
         },
         opts = {},
+        config = function()
+          local luasnip = require 'luasnip'
+
+          -- Load snippets from your `~/.config/nvim-kickstart/snippets` folder
+          require('luasnip.loaders.from_lua').load { paths = '~/.config/nvim-kickstart/snippets' }
+
+          -- Optional: enable autosnippets
+          luasnip.config.setup { enable_autosnippets = true }
+        end,
       },
       'folke/lazydev.nvim',
     },
